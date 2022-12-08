@@ -1,9 +1,8 @@
 package com.mifen.myapplication
 
-class herbivore(
+class Herbivore(
     amount: Int,
-    val herbivore: String,
+    val Herbivore: String,
 ): Animal(amount){
 var list= listOf(1,2)
-
 }

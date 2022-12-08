@@ -9,7 +9,7 @@ open class Animal(
     constructor(parcel: Parcel) : this(parcel.readInt()) {
     }
 
-    fun printAnimai(): Int=2
+   open fun printAnimai(): Int=2
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(amount)
     }
