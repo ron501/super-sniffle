@@ -1,53 +1,18 @@
-package com.mifen.myapplication
+package com.mifen.zadanie1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.mifen.myapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d(MainActivity::class.simpleName, "onCreate")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d(MainActivity::class.simpleName, "onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(MainActivity::class.simpleName, "onResume")
-    }
-
-    override fun onPause() {
-        super.onPause ()
-        Log.d(MainActivity::class.simpleName, "onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(MainActivity::class.simpleName, "onStop")
-
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d(MainActivity::class.simpleName, "onRestart")
-
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        Log.d(MainActivity::class.simpleName, "onSavedInstanceState")
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(MainActivity::class.simpleName, "onDestroy")
+        val cow = Herbivores("cow", 300)
+        val hare = Herbivores("hare", 20)
+        val bear = Carnivores("bear", 200)
+        val fox = Carnivores("fox", 40)
+        val list = listOf(cow, hare, bear, fox)
+        println(list)//Log.d
     }
 }

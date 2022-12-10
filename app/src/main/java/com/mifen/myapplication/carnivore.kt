@@ -1,8 +1,14 @@
-package com.mifen.myapplication
+package com.mifen.zadanie1
 
-class Carnivore(
-    amount: Int,
-    val Carnivore: String,
-): Animal(amount){
-var list = listOf(1,2)
+data class Carnivores(
+    val name: String,
+    val size: Int
+) {
+    fun printName() {
+        println(name)
+    }
+
+    fun eatSmth(eat: String) {
+        println("$name ate $eat")
+    }
 }
